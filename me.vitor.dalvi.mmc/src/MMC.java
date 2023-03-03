@@ -31,9 +31,9 @@ public class MMC {
         int a = num1;
         int b = num2;
         while (b != 0) {
-            int r = a % b;
+            int res = a % b;
             a = b;
-            b = r;
+            b = res;
         }
         int mmc = (num1 * num2) / a;
 
