@@ -6,16 +6,25 @@ public class MMC {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Você quer calcular o MMC de um número? Certo!");
-        System.out.println();
-        System.out.print("Digite o primeiro número: ");
-        int num1 = sc.nextInt();
-        System.out.print("Digite o segundo número: ");
-        int num2 = sc.nextInt();
+        char opcao = 's';
 
-        int mmc = calcularMMC(num1, num2);
+        while (opcao == 's') {
+            System.out.println();
+            System.out.println("Para calcular o MMC dos números\nselecionados, digite qualquer letra.");
+            String a = sc.nextLine();
+            System.out.println();
+            System.out.print("Digite o primeiro número: ");
+            int num1 = sc.nextInt();
+            System.out.print("Digite o segundo número: ");
+            int num2 = sc.nextInt();
 
-        System.out.println("O MMC de " + num1 + " e " + num2 + " é: " + mmc);
+            int mmc = calcularMMC(num1, num2);
+
+            System.out.println("O MMC de " + num1 + " e " + num2 + " é: " + mmc);
+            System.out.println("");
+            System.out.print("Você deseja calcular mais números? (S/N): ");
+            opcao = Character.toLowerCase(sc.next().charAt(0));
+        }
     }
 
     private static int calcularMMC(int num1, int num2) {
