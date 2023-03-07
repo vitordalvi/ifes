@@ -1,17 +1,15 @@
-import java.util.Locale;
 import java.util.Scanner;
 
 public class MMC {
     public static void main(String[] args) {
-        Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
 
         char opcao = 's';
 
-        while (opcao == 's') {
             System.out.println();
-            System.out.println("Para calcular o MMC dos números\nselecionados, digite qualquer letra.");
+            System.out.println("Para calcular o MMC dos números\nselecionados, digite qualquer letra ou número.");
             String a = sc.nextLine();
+        while (opcao == 's') {
             System.out.println();
             System.out.print("Digite o primeiro número: ");
             int num1 = sc.nextInt();
